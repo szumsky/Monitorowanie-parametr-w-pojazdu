@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Terminal.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Monitorowanie parametrów pojazdów" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+        </Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <BoxView/>
+            <Button Text="Sprawdź połączenie z urządzeniem" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="Button1Clicked"/>
+            <BoxView Grid.Column="1"/>
+            <Button Grid.Column="1" Text="Połącz z chmurą" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="Button2Clicked"/>
+            <BoxView Grid.Row="1"/>
+            <Button Grid.Row="1" Text="Wykonaj pomiar" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="Button3Clicked"/>
+            <BoxView Grid.Row="1" Grid.Column="1"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Wczytaj poprzednią sesje" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="Button4Clicked"/>
+            <BoxView Grid.Row="2"/>
+            <Button Grid.Row="2" Text="Stan czujników" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="Button5Clicked"/>
+            <BoxView Grid.Row="2"  Grid.Column="1"/>
+            <Button Grid.Row="2"  Grid.Column="1" Text="Kalibracja" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="Button6Clicked"/>
+        </Grid>
+        <StackLayout AutomationId="ABC"></StackLayout>
+
+        
+    </StackLayout>
+
+</ContentPage>

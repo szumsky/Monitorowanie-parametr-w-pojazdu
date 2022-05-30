@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terminal</name>
+    </assembly>
+    <members>
+        <member name="T:Terminal.App">
+            <summary>
+            Główna klasa wejściowa aplikacji
+            </summary>
+        </member>
+        <member name="M:Terminal.App.#ctor">
+            Inicjalizacja aplikacji
+        </member>
+        <member name="M:Terminal.App.OnStart">
+            Funkcja uruchamiana podczas uruchamiania aplikacja
+        </member>
+        <member name="M:Terminal.App.OnSleep">
+            Funkcja uruchamiana podczas usypiania aplikacja
+        </member>
+        <member name="M:Terminal.App.OnResume">
+            Funkcja uruchamiana podczas wznawiania aplikacja
+        </member>
+        <member name="T:Terminal.Bluetooth">
+            <summary>
+            Klasa odpowiedzialna za komunikację Bluetooth
+            </summary>
+        </member>
+        <member name="F:Terminal.Bluetooth.ble">
+            Uchwyt interfejsu Bluetooth
+        </member>
+        <member name="F:Terminal.Bluetooth.adapter">
+            Adapter interfejsu Bluetooth
+        </member>
+        <member name="F:Terminal.Bluetooth.device">
+            Połączone urządzenie
+        </member>
+        <member name="M:Terminal.Bluetooth.CheckConnection">
+            Sprawdzenie połączenia i inicjalizacja zmiennych
+        </member>
+        <member name="M:Terminal.Bluetooth.ReadSensors">
+            Odczytanie danych o podłączonych do kontrolera sensorach
+        </member>
+        <member name="M:Terminal.Bluetooth.ReadSensorsData">
+            Odczytanie danych z sensorów
+        </member>
+        <member name="M:Terminal.Bluetooth.BluetoothWrite(System.Int32,System.Int32)">
+            Wysłanie danych do kontrolera
+        </member>
+        <member name="T:Terminal.Cloud">
+            <summary>
+            Klasa odpowiedzialna za komunikację z bazą danych
+            </summary>
+        </member>
+        <member name="F:Terminal.Cloud.handle">
+            Uchwyt do bazy danych
+        </member>
+        <member name="M:Terminal.Cloud.Connect">
+            Połączenie z bazą danych
+        </member>
+        <member name="M:Terminal.Cloud.ReadSessionData(System.String)">
+            Odczytanie danych wybranej sesji z bazy danych
+        </member>
+        <member name="M:Terminal.Cloud.ReadSessions">
+            Odczytanie sesji z bazy danych
+        </member>
+        <member name="M:Terminal.Cloud.CloudWrite(System.Int32,System.Int32)">
+            Wysłanie komunikatu do bazy danych
+        </member>
+        <member name="M:Terminal.Cloud.CloudWriteMeas(System.String,Terminal.SensorData[])">
+            Wysłanie danych do konkretnej sesji w bazie danych
+        </member>
+        <member name="T:Terminal.MainPage">
+            <summary>
+            Klasa odpowiedzialna za obsługę głównej strony aplikacji
+            </summary>
+        </member>
+        <member name="M:Terminal.MainPage.#ctor">
+            Inicjalizacja strony
+        </member>
+        <member name="M:Terminal.MainPage.Button1Clicked(System.Object,System.EventArgs)">
+            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Sprawdź połączenie z urządzeniem". Sprawdzane jest połączenie z kontrolerem za pomocą interfejsu Bluetooth. Wykorzystuje klasę Bluetooth.
+        </member>
+        <member name="M:Terminal.MainPage.Button2Clicked(System.Object,System.EventArgs)">
+            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Połącz z chmurą". Nawiązywane jest połączenie z bazą danych. Wykorzystuje klasę Cloud.
+        </member>
+        <member name="M:Terminal.MainPage.Button3Clicked(System.Object,System.EventArgs)">
+            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Wykonaj pomiar". Wyświetlana jest strona SensorDataPage zawierająca odebrane z czujników dane. Nnastępuje rozpoczęcie nowej sesji pomiarowej.
+        </member>
+        <member name="M:Terminal.MainPage.Button4Clicked(System.Object,System.EventArgs)">
+            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Wczytaj poprzednią sesje". Wyświetlana jest strona SessionsPage zawierająca odczytane z bazy danych sesje pomiarowe.
+        </member>
+        <member name="M:Terminal.MainPage.Button5Clicked(System.Object,System.EventArgs)">
+            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Stan czujników". Wyświetlana jest strona SensorsPage zawierająca dane o czujnikach odczytane z kontrolera.
+        </member>
+        <member name="M:Terminal.MainPage.Button6Clicked(System.Object,System.EventArgs)">
+            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Kalibracja". Następuje kalibracja kontrolera za pomocą danych zawartych w chmurze. Wykorzustuje klasu Cloud oraz Bluetooth.
+        </member>
+        <member name="T:Terminal.SensorData">
+            <summary>
+            Klasa opisująca czujnik
+            </summary>
+        </member>
+        <member name="P:Terminal.SensorData.name">
+            Nazwa czujnika
+        </member>
+        <member name="P:Terminal.SensorData.id">
+            Identyfikator czujnika
+        </member>
+        <member name="P:Terminal.SensorData.state">
+            Stan czujnika
+        </member>
+        <member name="P:Terminal.SensorData.measure">
+            Nazwa mierzonej wartości
+        </member>
+        <member name="P:Terminal.SensorData.value">
+            Odczytana wartość z czujnika
+        </member>
+        <member name="P:Terminal.SensorData.error">
+            Informacja o przekroczeniu wartości nominalnych
+        </member>
+        <member name="M:Terminal.SensorData.#ctor(System.String,System.String,System.Single,System.Boolean)">
+            Inicjalizacja obiektu czujnika 
+        </member>
+    </members>
+</doc>

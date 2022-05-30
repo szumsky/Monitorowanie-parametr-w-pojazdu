@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Terminal"
+             x:Class="Terminal.SensorsPage">
+
+    <ContentPage.BindingContext>
+        <local:SensorViewModel></local:SensorViewModel>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Powrót" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="BackClicked"/>
+            <Button Text="Odświerz" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Command="{Binding Refresh}"/>
+        </StackLayout>
+        <ListView x:Name="Sensors"
+            ItemsSource="{Binding Sensors}"
+            CachingStrategy="RecycleElement">
+    <!--Built in Cells-->
+     <ListView.ItemTemplate>
+            <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <BoxView/>
+                            <Label Text="{Binding name}" FontSize="Large"/>
+                            <BoxView Grid.Column="1"/>
+                            <Label Grid.Column="1" Text="{Binding id}" FontSize="Large"/>
+                            <BoxView Grid.Column="2"/>
+                            <Label Grid.Column="2" Text="{Binding state}" FontSize="Large"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+    </ListView.ItemTemplate>
+    
+  </ListView>
+    </StackLayout>
+</ContentPage>

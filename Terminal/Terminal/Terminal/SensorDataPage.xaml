@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Terminal"
+             x:Class="Terminal.SensorDataPage">
+    
+    <ContentPage.BindingContext>
+        <local:SensorsDataViewModel></local:SensorsDataViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Powrót" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Clicked="BackClicked"/>
+            <Button Text="Odświerz" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="LawnGreen" Command="{Binding Refresh}"/>
+        </StackLayout>
+    <ListView x:Name="SensorsData"
+            ItemsSource="{Binding SensorsData}"
+            CachingStrategy="RecycleElement">
+        
+    <!--Built in Cells-->
+
+             <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding name}" FontSize="Large"/>
+                            <Label Text="{Binding measure}" FontSize="Medium" Padding="40"/>
+                            <Label Text="{Binding value}" FontSize="Medium" Padding="40"/>
+                            <Label Text="{Binding error}" FontSize="Medium" Padding="40"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+             </ListView.ItemTemplate>
+    
+
+         </ListView>
+    </StackLayout>
+</ContentPage>

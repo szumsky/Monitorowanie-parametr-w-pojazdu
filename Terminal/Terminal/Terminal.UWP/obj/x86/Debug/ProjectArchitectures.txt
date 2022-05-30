@@ -1,0 +1,1 @@
+C:\Users\tomas\source\repos\Terminal\Terminal\Terminal.UWP\Terminal.UWP.csproj;x86
