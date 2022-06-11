@@ -24,14 +24,14 @@ namespace Terminal
         /// Sprawdzenie połączenia i inicjalizacja zmiennych
         public static int CheckConnection()
         {
-            ble = CrossBluetoothLE.Current;
-            adapter = CrossBluetoothLE.Current.Adapter;
-            var state = ble.State;
-            if (state.ToString() == "Off")
-                return 1;
+            //ble = CrossBluetoothLE.Current;
+            //adapter = CrossBluetoothLE.Current.Adapter;
+            //var state = ble.State;
+            //if (state.ToString() == "Off")
+            //    return 1;
 
             //int count = adapter.ConnectedDevices.Count;
-            device = adapter.ConnectedDevices[0];
+            //device = adapter.ConnectedDevices[0];
 
 
             return 0;
@@ -40,9 +40,10 @@ namespace Terminal
         /// Odczytanie danych o podłączonych do kontrolera sensorach
         public static SensorData[] ReadSensors() {
             SensorData[] sensors = {
-                new SensorData("a", 0, "1"),
-                new SensorData("b", 1, "1"),
-                new SensorData("c", 2, "0")
+                new SensorData("Czujnik temperatury1", 0, "Działa poprawnie"),
+                new SensorData("Czujnik temperatury2",1, "Uszkodzony"),
+                new SensorData("Czujnik temperatury3", 2, "Działa poprawnie"),
+                new SensorData("Czujnik ciśnienia", 3, "Działa poprawnie")
                 };
             return sensors;
         }
@@ -50,9 +51,10 @@ namespace Terminal
         /// Odczytanie danych z sensorów
         public static SensorData[] ReadSensorsData() {
             SensorData[] sensorsData = {
-                new SensorData("a", "Temp", 50.0f, false),
-                new SensorData("b", "Temp", 50.0f, false),
-               new SensorData("c", "Temp", 50.0f, true)
+                new SensorData("Czujnik temperatury1", "Temperatura", 25.0f, false),
+                new SensorData("Czujnik temperatury2", "Temperatura", 22.0f, false),
+                new SensorData("Czujnik temperatury3", "Temperatura", 135.0f, true),
+                new SensorData("Czujnik ciśnienia", "Ciśnienie", 1025.0f, false)
                 };
             return sensorsData;
         }

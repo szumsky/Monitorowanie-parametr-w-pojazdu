@@ -23,12 +23,12 @@ namespace Terminal
             data = Bluetooth.ReadSensors();
             for (int i = 0; i < data.Length; i++)
             {
-                //Sensors.Add(new SensorData(data[i].name, data[i].id, data[i].state));
+                Sensors.Add(new SensorData(data[i].name, data[i].id, data[i].state));
             }
-            Sensors.Add(new SensorData("Czujnik temperatury1", 0, "Działa poprawnie"));
-            Sensors.Add(new SensorData("Czujnik temperatury2",1, "Uszkodzony"));
-            Sensors.Add(new SensorData("Czujnik temperatury3", 2, "Działa poprawnie"));
-            Sensors.Add(new SensorData("Czujnik ciśnienia", 3, "Działa poprawnie"));
+            //Sensors.Add(new SensorData("Czujnik temperatury1", 0, "Działa poprawnie"));
+            //Sensors.Add(new SensorData("Czujnik temperatury2",1, "Uszkodzony"));
+            //Sensors.Add(new SensorData("Czujnik temperatury3", 2, "Działa poprawnie"));
+            //Sensors.Add(new SensorData("Czujnik ciśnienia", 3, "Działa poprawnie"));
         }
         /// Komenda przypisująca zawierająca funkcję obsługi przycisku "Odświerz"
         public ICommand Refresh => new Command(RefreshClicked);

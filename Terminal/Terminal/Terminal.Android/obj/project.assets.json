@@ -2197,11 +2197,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.Android\\Terminal.Android.csproj",
+      "projectUniqueName": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.Android\\Terminal.Android.csproj",
       "projectName": "Terminal.Android",
-      "projectPath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.Android\\Terminal.Android.csproj",
+      "projectPath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.Android\\Terminal.Android.csproj",
       "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.Android\\obj\\",
+      "outputPath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2224,8 +2224,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal\\Terminal.csproj": {
-              "projectPath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal\\Terminal.csproj"
+            "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal\\Terminal.csproj": {
+              "projectPath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal\\Terminal.csproj"
             }
           }
         }

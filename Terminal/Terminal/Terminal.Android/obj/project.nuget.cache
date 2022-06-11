@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dN4mz1kqtH57WS7fSjktUoaRqapgUx8omGBs778oJgkQlpNwMpnld2whNVuFxdyYoOAXfTCN9KUss80D5vi9ew==",
+  "dgSpecHash": "SGYbcPF9oyXLZGiQcDSJ9oxPoOBw2iVBskEmHwSccRNxmDdIBR3esJ6u/B/q4RmqNpbgnRpno1C+6lbszWDtfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.Android\\Terminal.Android.csproj",
+  "projectFilePath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.Android\\Terminal.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\plugin.ble\\2.1.3\\plugin.ble.2.1.3.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

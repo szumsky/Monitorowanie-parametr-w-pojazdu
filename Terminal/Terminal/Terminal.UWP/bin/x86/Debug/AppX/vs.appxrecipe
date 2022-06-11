@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\tomas\source\repos\Terminal\Terminal\Terminal.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-29T15:40:42.138</Modified>
+      <Modified>2022-06-11T16:47:57.661</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\tomas\source\repos\Terminal\Terminal\Terminal.UWP\bin\x86\Debug\Terminal.UWP.exe">
       <PackagePath>entrypoint\Terminal.UWP.exe</PackagePath>
-      <Modified>2022-05-29T15:40:41.154</Modified>
+      <Modified>2022-06-11T16:47:56.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tomas\.nuget\packages\plugin.ble\2.1.3\lib\netstandard2.0\Plugin.BLE.Abstractions.dll">
       <PackagePath>Plugin.BLE.Abstractions.dll</PackagePath>
@@ -76,7 +76,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tomas\source\repos\Terminal\Terminal\Terminal\bin\Debug\netstandard2.0\Terminal.dll">
       <PackagePath>Terminal.dll</PackagePath>
-      <Modified>2022-05-29T15:40:35.537</Modified>
+      <Modified>2022-06-11T17:15:46.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tomas\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -235,11 +235,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tomas\source\repos\Terminal\Terminal\Terminal.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-29T15:40:41.087</Modified>
+      <Modified>2022-06-11T16:47:56.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tomas\source\repos\Terminal\Terminal\Terminal.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-05-29T15:40:41.087</Modified>
+      <Modified>2022-06-11T16:47:56.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -259,7 +259,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tomas\source\repos\Terminal\Terminal\Terminal.UWP\bin\x86\Debug\Core\Terminal.UWP.exe">
       <PackagePath>Terminal.UWP.exe</PackagePath>
-      <Modified>2022-05-29T15:40:42.134</Modified>
+      <Modified>2022-06-11T16:47:57.656</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

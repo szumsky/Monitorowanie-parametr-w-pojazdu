@@ -1082,11 +1082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.iOS\\Terminal.iOS.csproj",
+      "projectUniqueName": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.iOS\\Terminal.iOS.csproj",
       "projectName": "Terminal.iOS",
-      "projectPath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.iOS\\Terminal.iOS.csproj",
+      "projectPath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.iOS\\Terminal.iOS.csproj",
       "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.iOS\\obj\\",
+      "outputPath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1109,8 +1109,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal\\Terminal.csproj": {
-              "projectPath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal\\Terminal.csproj"
+            "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal\\Terminal.csproj": {
+              "projectPath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal\\Terminal.csproj"
             }
           }
         }

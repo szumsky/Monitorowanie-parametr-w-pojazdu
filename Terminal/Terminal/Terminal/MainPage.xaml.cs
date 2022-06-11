@@ -45,6 +45,7 @@ namespace Terminal
             switch (Cloud.Connect())
             {
                 default:
+                    DisplayAlert("Cloud", "Połączenie poprawne", "Zamknij");
                     break;
             }
         }
@@ -68,6 +69,7 @@ namespace Terminal
         public void Button6Clicked(object sender, EventArgs args)
         {
             Bluetooth.BluetoothWrite(1, 1);
+            DisplayAlert("Kalibracja", "Kalibracja zakończona", "Zamknij");
         }
 
     }

@@ -79,22 +79,22 @@
             Inicjalizacja strony
         </member>
         <member name="M:Terminal.MainPage.Button1Clicked(System.Object,System.EventArgs)">
-            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Sprawdź połączenie z urządzeniem". Sprawdzane jest połączenie z kontrolerem za pomocą interfejsu Bluetooth. Wykorzystuje klasę Bluetooth.
+            Funkcja obsługująca naciśnięcie przyciusku "Sprawdź połączenie z urządzeniem". Sprawdzane jest połączenie z kontrolerem za pomocą interfejsu Bluetooth. Wykorzystuje klasę Bluetooth.
         </member>
         <member name="M:Terminal.MainPage.Button2Clicked(System.Object,System.EventArgs)">
-            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Połącz z chmurą". Nawiązywane jest połączenie z bazą danych. Wykorzystuje klasę Cloud.
+            Funkcja obsługująca naciśnięcie przyciusku "Połącz z chmurą". Nawiązywane jest połączenie z bazą danych. Wykorzystuje klasę Cloud.
         </member>
         <member name="M:Terminal.MainPage.Button3Clicked(System.Object,System.EventArgs)">
-            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Wykonaj pomiar". Wyświetlana jest strona SensorDataPage zawierająca odebrane z czujników dane. Nnastępuje rozpoczęcie nowej sesji pomiarowej.
+            Funkcja obsługująca naciśnięcie przyciusku "Wykonaj pomiar". Wyświetlana jest strona SensorDataPage zawierająca odebrane z czujników dane. Nnastępuje rozpoczęcie nowej sesji pomiarowej.
         </member>
         <member name="M:Terminal.MainPage.Button4Clicked(System.Object,System.EventArgs)">
-            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Wczytaj poprzednią sesje". Wyświetlana jest strona SessionsPage zawierająca odczytane z bazy danych sesje pomiarowe.
+            Funkcja obsługująca naciśnięcie przyciusku "Wczytaj poprzednią sesje". Wyświetlana jest strona SessionsPage zawierająca odczytane z bazy danych sesje pomiarowe.
         </member>
         <member name="M:Terminal.MainPage.Button5Clicked(System.Object,System.EventArgs)">
-            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Stan czujników". Wyświetlana jest strona SensorsPage zawierająca dane o czujnikach odczytane z kontrolera.
+            Funkcja obsługująca naciśnięcie przyciusku "Stan czujników". Wyświetlana jest strona SensorsPage zawierająca dane o czujnikach odczytane z kontrolera.
         </member>
         <member name="M:Terminal.MainPage.Button6Clicked(System.Object,System.EventArgs)">
-            Funkcja opisująca opreacje wykonywane podczas naciśnięcia przyciusku "Kalibracja". Następuje kalibracja kontrolera za pomocą danych zawartych w chmurze. Wykorzustuje klasu Cloud oraz Bluetooth.
+            Funkcja obsługująca naciśnięcie przyciusku "Kalibracja". Następuje kalibracja kontrolera za pomocą danych zawartych w chmurze. Wykorzustuje klasu Cloud oraz Bluetooth.
         </member>
         <member name="T:Terminal.SensorData">
             <summary>
@@ -120,7 +120,163 @@
             Informacja o przekroczeniu wartości nominalnych
         </member>
         <member name="M:Terminal.SensorData.#ctor(System.String,System.String,System.Single,System.Boolean)">
-            Inicjalizacja obiektu czujnika 
+            Inicjalizacja obiektu czujnika opisująca odczytane z niego dane
+        </member>
+        <member name="M:Terminal.SensorData.#ctor(System.String,System.Int32,System.String)">
+            Inicjalizacja obiektu czujnika opisująca jego stan
+        </member>
+        <member name="T:Terminal.SensorDataPage">
+            <summary>
+            Klasa odpowiedzialna za obsługę strony z danymi odczytanymi z czujnika
+            </summary>
+        </member>
+        <member name="M:Terminal.SensorDataPage.#ctor">
+            Inicjalizacja strony
+        </member>
+        <member name="M:Terminal.SensorDataPage.BackClicked(System.Object,System.EventArgs)">
+            Funkcja obsługująca naciśnięcie przyciusku "Powrót". Następuje powrót do poprzedniej strony (MainPage)
+        </member>
+        <member name="T:Terminal.SensorsDataViewModel">
+            <summary>
+            Klasa odpowiedzialna za tworzenie danych wyświetlanych na stronie SensorDataPage i częściową jej obsługę
+            </summary>
+        </member>
+        <member name="P:Terminal.SensorsDataViewModel.SensorsData">
+            Kolekcja zawierająca dane pomiarowe z czujników
+        </member>
+        <member name="F:Terminal.SensorsDataViewModel.data">
+            Pojedyncze dane odczytane z czujnika
+        </member>
+        <member name="M:Terminal.SensorsDataViewModel.#ctor">
+            Inicjalizacja klasy i odczytanie danych z czujników z wykorzystaniem interfejsu Bluetooth, które są wyświetlane na stronie
+        </member>
+        <member name="P:Terminal.SensorsDataViewModel.Refresh">
+            Komenda przypisująca zawierająca funkcję obsługi przycisku "Odświerz"
+        </member>
+        <member name="M:Terminal.SensorsDataViewModel.RefreshClicked">
+            Funkcja obsługująca naciśnięcie przyciusku "Odświerz". Odczytuje dane z czujników z wykorzystaniem interfejsu Bluetooth, które zostają wyświetlone na stronie
+        </member>
+        <member name="T:Terminal.SensorsPage">
+            <summary>
+            Klasa odpowiedzialna za obsługę strony z informacjami o czujnikach podłączonych do kontrolera
+            </summary>
+        </member>
+        <member name="M:Terminal.SensorsPage.BackClicked(System.Object,System.EventArgs)">
+            Funkcja obsługująca naciśnięcie przyciusku "Powrót". Następuje powrót do poprzedniej strony (MainPage)
+        </member>
+        <member name="T:Terminal.SensorViewModel">
+            <summary>
+            Klasa odpowiedzialna za tworzenie danych wyświetlanych na stronie SensorsPage i częściową jej obsługę
+            </summary>
+        </member>
+        <member name="P:Terminal.SensorViewModel.Sensors">
+            Kolekcja zawierająca dane o czujnikach
+        </member>
+        <member name="F:Terminal.SensorViewModel.data">
+            Dane o pojedynczym czujniku
+        </member>
+        <member name="M:Terminal.SensorViewModel.#ctor">
+            Inicjalizacja klasy i odczytanie danych o czujnikach z wykorzystaniem interfejsu Bluetooth, które są wyświetlane na stronie
+        </member>
+        <member name="P:Terminal.SensorViewModel.Refresh">
+            Komenda przypisująca zawierająca funkcję obsługi przycisku "Odświerz"
+        </member>
+        <member name="M:Terminal.SensorViewModel.RefreshClicked">
+            Funkcja obsługująca naciśnięcie przyciusku "Odświerz". Odczytuje dane o czujnikach z wykorzystaniem interfejsu Bluetooth, które zostają wyświetlone na stronie
+        </member>
+        <member name="T:Terminal.Session">
+            <summary>
+            Klasa opisująca sesje
+            </summary>
+        </member>
+        <member name="P:Terminal.Session.name">
+            Nazwa sesji
+        </member>
+        <member name="P:Terminal.Session.date">
+            Data utworzenia sesji
+        </member>
+        <member name="P:Terminal.Session.sessionData">
+            Dane pomiarowe zawarte w sesji
+        </member>
+        <member name="P:Terminal.Session.time">
+            Czasy wykonania pomiarów zawartych w sesji
+        </member>
+        <member name="F:Terminal.Session.i">
+            Zmienna wykorzystywana do indeksowania danych
+        </member>
+        <member name="F:Terminal.Session.j">
+            Zmienna wykorzystywana do indeksowania danych
+        </member>
+        <member name="M:Terminal.Session.#ctor(System.String,System.DateTime)">
+            Inicjalizacja obiektu sesji wykorzystywana podczas utworzenia sesji
+        </member>
+        <member name="M:Terminal.Session.#ctor(System.String,System.DateTime,Terminal.SensorData[],System.DateTime[])">
+            Inicjalizacja obiektu sesji umożliwiające zapisanie pełnych danych sesji (tylko do testowania)
+        </member>
+        <member name="M:Terminal.Session.addData(Terminal.SensorData)">
+            Dodanie pojedynczych danych pomiarowych z czujnika do sesji
+        </member>
+        <member name="M:Terminal.Session.addData(Terminal.SensorData,System.DateTime)">
+            Dodanie pojedynczych danych pomiarowych z czujnika do sesji oraz czasu ich wykonania
+        </member>
+        <member name="T:Terminal.SessionDataPage">
+            <summary>
+            Klasa odpowiedzialna za obsługę strony z danymi pomiarowymi zawartymi w danej sesji z bazy danych
+            </summary>
+        </member>
+        <member name="M:Terminal.SessionDataPage.BackClicked(System.Object,System.EventArgs)">
+            Funkcja obsługująca naciśnięcie przyciusku "Powrót". Następuje powrót do poprzedniej strony (SessionPage)
+        </member>
+        <member name="T:Terminal.SessionDataViewModel">
+            <summary>
+            Klasa odpowiedzialna za tworzenie danych wyświetlanych na stronie SessionDataPage i częściową jej obsługę
+            </summary>
+        </member>
+        <member name="P:Terminal.SessionDataViewModel.sessionSensorData">
+            Kolekcja zawierająca dane pomiarowe z danej sesji
+        </member>
+        <member name="P:Terminal.SessionDataViewModel.sessionDateData">
+            Kolekcja zawierająca czasy wykonania pomiarów z danej sesji
+        </member>
+        <member name="P:Terminal.SessionDataViewModel.data">
+            Dana sesja pomiarowa
+        </member>
+        <member name="P:Terminal.SessionDataViewModel.name">
+            Nazwa sesji pomiarowej
+        </member>
+        <member name="P:Terminal.SessionDataViewModel.date">
+            Data utworzenia sesji pomiarowej
+        </member>
+        <member name="P:Terminal.SessionDataViewModel.time">
+            Czas wykonania pomiaru
+        </member>
+        <member name="M:Terminal.SessionDataViewModel.#ctor">
+            Inicjalizacja klasy i odczytanie danych pomiarowych danej sesji z bazy danych (Cloud), które są wyświetlane na stronie
+        </member>
+        <member name="T:Terminal.SessionsPage">
+            <summary>
+            Klasa odpowiedzialna za obsługę strony wyświetlającej sesje pomiarowe zawarte w bazie danych
+            </summary>
+        </member>
+        <member name="M:Terminal.SessionsPage.BackClicked(System.Object,System.EventArgs)">
+            Funkcja obsługująca naciśnięcie przyciusku "Powrót". Następuje powrót do poprzedniej strony (MainPage)
+        </member>
+        <member name="M:Terminal.SessionsPage.SessionTapped(System.Object,System.EventArgs)">
+            Funkcja obsługująca naciśnięcie jednej z sesji pomiarowych. Następuje przejście do strony SessionDataPage i wyświetlenie danych pomiarowych z danej sesji odczytanych z chmury
+        </member>
+        <member name="T:Terminal.SessionViewModel">
+            <summary>
+            Klasa odpowiedzialna za tworzenie danych wyświetlanych na stronie SessionsPage i częściową jej obsługę
+            </summary>
+        </member>
+        <member name="P:Terminal.SessionViewModel.Sessions">
+            Kolekcja zawierająca sesje pomiarowe zawarte w bazie danych
+        </member>
+        <member name="F:Terminal.SessionViewModel.data">
+            Pojedyncza sesja zawarta w bazie danych
+        </member>
+        <member name="M:Terminal.SessionViewModel.#ctor">
+            Inicjalizacja klasy i odczytanie sesji z bazy danych danych (Cloud), które są wyświetlane na stronie
         </member>
     </members>
 </doc>

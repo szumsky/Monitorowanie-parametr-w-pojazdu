@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GwwR2SEq0wCfryGuBsTcliheQvK2VJc6p9eYkMFthiKLQGW4oURg1nsL2MRN57K01mXPmhMDcAGNL+Ly58L+kg==",
+  "dgSpecHash": "0RjFGhQ2SA6/HO0/4G6O4r0ZVZGiTDI/6d1RpBcw1fYrp0HUjoVs5PwUZtVxqt4MoiNufTef5aLXutZc6LZWtw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal.iOS\\Terminal.iOS.csproj",
+  "projectFilePath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal.iOS\\Terminal.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\plugin.ble\\2.1.3\\plugin.ble.2.1.3.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

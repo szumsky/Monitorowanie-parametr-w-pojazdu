@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A3cMzafVB6r6L3WzP/otIKQwg+HJ4xDL/GxpFb7WDTO8UCh/AxWqNjtdsaTDoVZdQDxmTmJiUxe9VDANnGV6Yw==",
+  "dgSpecHash": "87KtkFfCg5O9hlKy834i1yVwDpF7nTYzfBZVbsCywXPI4Jhg/gHf6rR18cbDWMUHXaj23GmD+WVTk+8WyZRDvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\source\\repos\\Terminal\\Terminal\\Terminal\\Terminal.csproj",
+  "projectFilePath": "D:\\POS\\Monitorowanie-parametr-w-pojazdu\\Terminal\\Terminal\\Terminal\\Terminal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

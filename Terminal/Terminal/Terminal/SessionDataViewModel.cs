@@ -28,24 +28,25 @@ namespace Terminal
         {
             sessionSensorData = new ObservableCollection<SensorData>();
             sessionDateData = new ObservableCollection<DateTime>();
-            data = Cloud.ReadSessionData(name);
-            //name = data.name;
-            //date = data.date;
-            name = "Sesja 1";
-            date = DateTime.Now.Date;
-            for (int i = 0; i < data.time.Length; i++)
+            data = Cloud.ReadSessionData("Sesja 1");
+            name = data.name;
+            date = data.date;
+            int i = 0 , j = 0;
+            while (i < data.time.Length)
             {
                 sessionDateData.Add(data.time[i]);
-                for (int j = 0; j < data.sessionData.Length; j++)
+                while (data.sessionData[j] != null)
                 {
-                    //sessionSensorData.Add(new SensorData(data.sessionData[i][j].name, data.sessionData[i][j].measure, data.sessionData[i][j].value, data.sessionData[i][j].error));
+                    sessionSensorData.Add(new SensorData(data.sessionData[j].name, data.sessionData[j].measure, data.sessionData[j].value, data.sessionData[j].error));
+                    j++;
                 }
+                i++;
             }
 
-            sessionSensorData.Add(new SensorData("Czujnik temperatury1", "Temperatura", 25.0f, false));
-            sessionSensorData.Add(new SensorData("Czujnik temperatury2", "Temperatura", 28.0f, false));
-            sessionSensorData.Add(new SensorData("Czujnik temperatury3", "Temperatura", 123.0f, true));
-            sessionSensorData.Add(new SensorData("Czujnik ciśnienia", "Ciśnienie", 1024.0f, false));
+            //sessionSensorData.Add(new SensorData("Czujnik temperatury1", "Temperatura", 25.0f, false));
+            //sessionSensorData.Add(new SensorData("Czujnik temperatury2", "Temperatura", 28.0f, false));
+            //sessionSensorData.Add(new SensorData("Czujnik temperatury3", "Temperatura", 123.0f, true));
+            //sessionSensorData.Add(new SensorData("Czujnik ciśnienia", "Ciśnienie", 1024.0f, false));
 
         }
 

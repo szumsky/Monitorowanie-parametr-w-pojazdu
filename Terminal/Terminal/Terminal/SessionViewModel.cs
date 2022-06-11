@@ -21,11 +21,11 @@ namespace Terminal
             data = Cloud.ReadSessions();
             for (int i = 0; i < data.Length; i++)
             {
-                //Sessions.Add(new Session(data[i].name, data[i].date));
+                Sessions.Add(new Session(data[i].name, data[i].date));
             }
-            Sessions.Add(new Session("Sesja 1", DateTime.Today));
-            Sessions.Add(new Session("Sesja 2", DateTime.Today));
-            Sessions.Add(new Session("Sesja 3", DateTime.Today));
+            //Sessions.Add(new Session("Sesja 1", DateTime.Today));
+            //Sessions.Add(new Session("Sesja 2", DateTime.Today));
+            //Sessions.Add(new Session("Sesja 3", DateTime.Today));
         }
 
     }

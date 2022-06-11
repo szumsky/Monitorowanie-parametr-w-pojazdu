@@ -25,15 +25,15 @@ namespace Terminal
             data = Bluetooth.ReadSensorsData();
             for(int i=0; i < data.Length; i++)
             {
-                //SensorsData.Add(new SensorData(data[i].name, data[i].measure, data[i].value, data[i].error));
+                SensorsData.Add(new SensorData(data[i].name, data[i].measure, data[i].value, data[i].error));
             }
             //Cloud.CloudWrite(1, name);
             //Cloud.CloudWrite(2, date);
             //Cloud.CloudWriteMeas(name, data);
-            SensorsData.Add(new SensorData("Czujnik temperatury1", "Temperatura", 25.0f, false));
-            SensorsData.Add(new SensorData("Czujnik temperatury2", "Temperatura", 28.0f, false));
-            SensorsData.Add(new SensorData("Czujnik temperatury3", "Temperatura", 123.0f, true));
-            SensorsData.Add(new SensorData("Czujnik ciśnienia", "Ciśnienie", 1024.0f, false));
+            //SensorsData.Add(new SensorData("Czujnik temperatury1", "Temperatura", 25.0f, false));
+            //SensorsData.Add(new SensorData("Czujnik temperatury2", "Temperatura", 28.0f, false));
+            //SensorsData.Add(new SensorData("Czujnik temperatury3", "Temperatura", 123.0f, true));
+            //SensorsData.Add(new SensorData("Czujnik ciśnienia", "Ciśnienie", 1024.0f, false));
         }
 
         /// Komenda przypisująca zawierająca funkcję obsługi przycisku "Odświerz"
